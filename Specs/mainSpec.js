@@ -16,7 +16,8 @@ describe('Crunchinator Home Page', function () {
         po.clickContinueToCruncinator();
     });
 
-    it('verify crunchinator logo', function () {
+    it('verify Company HQ title', function () {
+        browser.sleep(4);
         po.verifyLogoTextIsDisplayed();
 
     });

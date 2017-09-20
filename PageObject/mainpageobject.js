@@ -21,7 +21,7 @@ var mainPageObject = {
      * ************************************/
     continueToCruncinator_text: by.xpath("//span[contains(.,'Continue to the Crunchinator')]"),
     hungTightMessage_text: by.xpath('//div[contains(.,\'Hang tight\')][@ng-show="!initiated"]'),
-    logo_text: by.xpath("//a[.='Crunchinator']"),
+    companyHQTitle: by.xpath("//h3[.='Company HQ']"),
 
 
     /************************************************************************
@@ -50,11 +50,13 @@ var mainPageObject = {
 
 
     /**
-     *   verify logo text is displayed
+     *   verify Company HQ is displayed
      */
-    verifyLogoTextIsDisplayed: function () {
-        commons.findElement(commons.findElement(mainPageObject.logo_text)).then(function (foundElement) {
-            expect(foundElement.isDisplayed()).toBeTruthy();
+    verifyCompanyHQIsDisplayed: function () {
+
+        commons.findElement(mainPageObject.companyHQTitle).then(function (foundElement) {
+            browser.sleep(7)
+            expect(foundElement.getText()).toBe("Company HQ");
         });
     },
 

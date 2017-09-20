@@ -1,6 +1,6 @@
 exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['/Users/viralpatel/WebstormProjects/KleerMail/Specs/main_spec.js'],
+    specs: ['../Specs/mainSpec.js'],
 
     seleniumArgs: ['-browserTimeout=60'],
     'browserName': 'chrome',

@@ -1,6 +1,6 @@
 exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['../Specs/mainSpec.js'],
+    specs: ['../Specs/*.js'],
 
     seleniumArgs: ['-browserTimeout=60'],
     'browserName': 'chrome',

@@ -1,7 +1,7 @@
 var po = require("../PageObject/mainpageobject");
 
 
-describe('Click On Companies', function () {
+describe('Search Company name', function () {
 
     it('should open a page', function () {
         browser.get('http://crunchinator.com/#/crunchinator');
@@ -11,19 +11,21 @@ describe('Click On Companies', function () {
         browser.driver.manage().window().maximize();
     });
 
-
     it('verify continue to the Crunchinator text is displayed ', function () {
         browser.driver.sleep(500);
         po.verifyContinueToCrunchinatorTextDisplayed();
     });
 
     it('click on the continue text', function () {
-        browser.driver.sleep(500);
         po.clickContinueToCruncinator();
     });
-    it('Click on company Name 0xdata', function () {
-
-        po.clickOnCompanyName0xdata();
+    it('Enter company Name 0xdata in search box', function () {
+        browser.driver.sleep(500);
+        po.searchCompanyName();
+    });
+    it('Select Company From Search List', function () {
+        browser.driver.sleep(500);
+        po.selectCompanyFromList();
     });
     it('verify Count Investors Of 0xdata Company', function () {
         browser.driver.sleep(500);

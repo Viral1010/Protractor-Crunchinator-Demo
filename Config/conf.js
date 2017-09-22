@@ -1,6 +1,6 @@
 exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['../Specs/clickCompanies.js'],
+    specs: ['../Specs/mainSpec.js'],
 
     seleniumArgs: ['-browserTimeout=60'],
     'browserName': 'chrome',

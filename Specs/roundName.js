@@ -1,7 +1,7 @@
 var po = require("../PageObject/mainpageobject");
 
 
-describe('Click On Companies', function () {
+describe('Funding Round Name', function () {
 
     it('should open a page', function () {
         browser.get('http://crunchinator.com/#/crunchinator');
@@ -10,7 +10,6 @@ describe('Click On Companies', function () {
     it('should maximize a window', function () {
         browser.driver.manage().window().maximize();
     });
-
 
     it('verify continue to the Crunchinator text is displayed ', function () {
         browser.driver.sleep(500);
@@ -21,21 +20,21 @@ describe('Click On Companies', function () {
         browser.driver.sleep(500);
         po.clickContinueToCruncinator();
     });
-    it('Click on company Name 0xdata', function () {
+    it('Click on Round Name "Angel"', function () {
+        po.clickOnRoundName();
+    });
 
-        po.clickOnCompanyName0xdata();
+    it('verify Count of Companies for angel', function () {
+        browser.driver.sleep(2000);
+        po.verifyCountOfCompaniesForRoundName();
     });
-    it('verify Count Investors Of 0xdata Company', function () {
-        browser.driver.sleep(500);
-        po.verifyCountInvestorsOf0xdataCompany();
+    it('verify Count of Investors for angel', function () {
+        browser.driver.sleep(2000);
+        po.verifyCountOfInvestorsForRoundName();
     });
-    it('Verify Company Name On Filter Bar', function () {
+    it('Verify Round Name On Filter Bar', function () {
         browser.driver.sleep(500);
-        po.verifyCompanyNameOnFiltersBar();
-    });
-    it('Verify Investor Name Of Company', function () {
-        browser.driver.sleep(500);
-        po.verifyInvestorsNameOfCompany();
+        po.verifyRoundNameOnFiltersBar();
     });
 
 });
